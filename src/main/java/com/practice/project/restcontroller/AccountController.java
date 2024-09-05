@@ -4,13 +4,11 @@ import com.practice.project.form.LoginForm;
 import com.practice.project.jwt.JwtToken;
 import com.practice.project.security.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "login")
-public class LoginController {
+@RequestMapping(value = "account")
+public class AccountController {
 
     @Autowired
     UserServiceImpl userService;

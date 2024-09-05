@@ -31,8 +31,8 @@ public class SecurityConfig {
                 .and()
                 .authorizeHttpRequests()
                 .requestMatchers("/main/list").hasRole("USER")
-                .requestMatchers("/login/sign-in").permitAll()
-                .requestMatchers("/login/sign-up").permitAll()
+                .requestMatchers("/account/sign-in").permitAll()
+                .requestMatchers("/account/sign-up").permitAll()
 
                 // 이 밖에 모든 요청에 대해서 인증을 필요로 한다는 설정
 //                .anyRequest().authenticated()
