@@ -32,7 +32,6 @@ const LoginForm = ref({
 });
 
 const submitForm = () => {
-    console.log(process.env)
     const url = instance.backendURL + '/account/sign-in';
     const data = LoginForm.value;
 
@@ -41,7 +40,8 @@ const submitForm = () => {
         if (res.data.accessToken) {
             localStorage.setItem('user', JSON.stringify(res.data));
         }
-        location.href = "/list";
+        //this.$router.push('/main');
+        location.href = "/main";
     })
     .catch(res => {
         console.log("error response",res.response);
@@ -52,17 +52,10 @@ const submitForm = () => {
 </script>
 
 <style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-}
-
 #loginForm {
   width: 500px;
   margin: auto;
 }
 </style>
+
   
